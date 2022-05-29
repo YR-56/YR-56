@@ -25,9 +25,10 @@ function sortArray(array $array): array
 
     // ここから記述
 //配列の先頭と最後を変数に格納
-
+$end_num = count($array) - 1;
+    
 $start = $array[0];
-$end = count($array) - 1;
+$end = $array[$end_num];
 
 //$startの値がピボットより小さいときは、右に進む
 while(true) {
@@ -48,7 +49,7 @@ if($start <= $end) {
 }
 
 //$startと$rightの値を入れ替える
-[$array[$start], $array[$end]] = [$arr[$right], $arr[$left]];
+[$start, $end] = [$end, $start];
 
 $start++;
 $end--;
