@@ -57,13 +57,13 @@ $end--;
 
 //左側に２つ以上あるとき、再帰
 if($start < $end-1) {
-    sortArray($start, $end-1, $array);
+    sortArray($array);
 }
 
 //右側に２つ以上あるとき、再帰
 
 if($end+1 < $end) {
-    sortArray($start, $end, $array);
+    sortArray($array);
 }
 
 
